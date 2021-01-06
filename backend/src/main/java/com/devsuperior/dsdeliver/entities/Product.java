@@ -11,10 +11,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_product")
 public class Product implements Serializable{
-	
-	
+
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -22,72 +22,61 @@ public class Product implements Serializable{
 	private Double price;
 	private String description;
 	private String imageUri;
-	
-	
+
+
+
 	public Product() {
-		
+
 	}
 
-
-	public Product(Long id, String name, Double price, String description, String imageUri) {
+	public Product(Long id, String name, Double price, String description, String imagemUri) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.price = price;
+		this.price = price;		
 		this.description = description;
-		this.imageUri = imageUri;
+		this.imageUri = imagemUri;
 	}
-
 
 	public Long getId() {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public Double getPrice() {
 		return price;
 	}
 
-
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-
 
 	public String getDescription() {
 		return description;
 	}
 
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-
-	public String getImageUri() {
+	public String getImagemUri() {
 		return imageUri;
 	}
 
-
-	public void setImageUri(String imageUri) {
-		this.imageUri = imageUri;
+	public void setImagemUri(String imagemUri) {
+		this.imageUri = imagemUri;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -96,7 +85,6 @@ public class Product implements Serializable{
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -114,10 +102,6 @@ public class Product implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-		
+
 
 }
